@@ -1,4 +1,4 @@
-# Simple SMA Trading Strategy API (FastAPI + Prisma + PostgreSQL)
+# SMA Trading Strategy API (FastAPI + Prisma + PostgreSQL)
 
 This project implements a **Moving Average Crossover Trading Strategy** backend using **FastAPI**, **Prisma ORM**, and **PostgreSQL (NeonDB)**.  
 It provides endpoints to **insert**, **retrieve**, and **analyze stock market data**, supporting real-world use cases for algorithmic trading and quantitative analysis.
