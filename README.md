@@ -33,13 +33,29 @@ It provides endpoints to **insert**, **retrieve**, and **analyze stock market da
 
 ---
 
-### ⚙️ **Project Setup & Initialization Commands**
+### **Setting Up a Virtual Environment**
 
-Follow these steps to correctly set up and run the FastAPI + Prisma + PostgreSQL trading strategy project.
+Before installing dependencies or running the project, it’s recommended to create and activate a **virtual environment**.
 
 ---
 
-#### 🧩 **Install Required Dependencies**
+#### **Create a Virtual Environment**
+
+Run the following command in your project’s root directory:
+
+```bash
+python -m venv VIRTUAL
+```
+
+---
+
+### **Project Setup & Initialization Commands**
+
+Follow these steps to correctly set up and run the FastAPI + Prisma + PostgreSQL trading strategy assignment.
+
+---
+
+#### **Install Required Dependencies**
 
 Once you have cloned or downloaded the project, install all the dependencies from the `requirements.txt` file.
 
@@ -117,7 +133,7 @@ Insert a single record into the database.
 }
 ```
 
-### 2. **GET `/strategy/performance`**
+### 3. **GET `/strategy/performance`**
 Calculates the Moving Average Crossover strategy using the stored data.
 
 ### **Query Parameters**
@@ -146,7 +162,7 @@ This project includes a **Dockerfile** for containerizing the FastAPI applicatio
 | **Expose Port** | Opens port `8000` for the FastAPI app. |
 | **Run Command** | Starts the app using `uvicorn main:app --host 0.0.0.0 --port 8000`. |
 
-#### 🧩 **Build & Run Commands**
+#### **Build & Run Commands**
 
 ```bash
 docker build -t invsto-sma-trading-strategy-api .
@@ -156,7 +172,7 @@ docker build -t invsto-sma-trading-strategy-api .
 docker run -p 8000:8000 invsto-sma-trading-strategy-api
 ```
 
-### 🧪 **Unit Testing Overview**
+### **Unit Testing Overview**
 
 Unit testing is an essential part of this project to ensure all API endpoints, data validations, and trading strategy calculations work correctly and reliably and everything is functionally correct.
 
