@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+prisma
+pandas
+pydantic
+coverage
+python-dotenv
+unittest-xml-reporting
