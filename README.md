@@ -18,17 +18,68 @@ It provides endpoints to **insert**, **retrieve**, and **analyze stock market da
 
 ## Project Structure
 ```txt
-./
+.
 ├── prisma/
-│   └── schema.prisma (Prisma Schema for defining the StockData model)
-├── insert_data.py (To Load the CSV data into the database)
-├── main.py (For FASTAPI application with endpoints)
-├── test_app.py (For Unit Tests for validation and the strategic logic)
-└── requirements.txt
+│   └── schema.prisma
+├── screenshots/
+│   └── all-screenshots
+├── Dockerfile
+├── insert_data.py
+├── main.py
+├── requirements.txt
+├── stock_data.csv
+└── test_app.py
 ```
 
 ---
 
+### ⚙️ **Project Setup & Initialization Commands**
+
+Follow these steps to correctly set up and run the FastAPI + Prisma + PostgreSQL trading strategy project.
+
+---
+
+#### 🧩 **Install Required Dependencies**
+
+Once you have cloned or downloaded the project, install all the dependencies from the `requirements.txt` file.
+
+```bash
+pip install -r requirements.txt
+```
+
+#### **Generate Prisma Client**
+```bash
+prisma generate
+```
+
+##### Screenshot of the Prisma Client Generation Terminal:
+![PRISMA GENERATE](/screenshots/PRISMA%20GENERATE.png "Optional Title")
+
+#### **Push Schema to Database**
+```bash
+prisma db push
+```
+
+##### Screenshot of the Prisma Schema Pushed to DB on NeonDB (PostgreSQL):
+![PRISMA PUSH](/screenshots/PRISMA%20PUSH.png "Optional Title")
+
+#### **Insert the Dataset**
+
+Download the stock data manually from the given Google Sheets link:  
+> [Stock Data Spreadsheet](https://docs.google.com/spreadsheets/d/1-rIkEb94tZ69FvsjXnfkVETYu6rftF-8/edit?rtpof=true)
+
+Save it locally in your project directory as:
+`stock_data.csv`
+
+Then, run the following command to insert all CSV data into the database:
+```bash
+python insert_data.py
+```
+
+##### Screenshot of Data Insertion on the DB:
+![DATA INSERTION](/screenshots/DATA%20INSERTION.png "Optional Title")
+
+---
 
 ## Endpoints Overview
 
